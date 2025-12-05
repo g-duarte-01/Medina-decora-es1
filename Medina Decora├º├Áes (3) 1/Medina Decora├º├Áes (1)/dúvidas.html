@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dúvidas</title>
+<style>
+ body {
+      font-family: 'Arial', sans-serif;
+      background-color: #b9a978 ;
+      margin: 0;
+      padding: 200px;
+    }
+
+    .quiz-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,5,9.9);
+    }
+
+    h1 {
+      text-align: center;
+      color: #000000;
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    .question h2 {
+      font-size: 20px;
+      color: #715b25;
+    }
+
+    .option {
+      position: relative;
+      margin: 10px 0;
+    }
+
+    .option button {
+      width: 100%;
+      padding: 10px;
+      background-color: #dad3b8;
+      border: none;
+      border-radius: 5px;
+      cursor: default;
+    }
+
+    .tip {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      border-left: 4px solid #dad3b8;
+      padding: 10px;
+      font-size: 14px;
+      color: #000000;
+      margin-top: 5px;
+      z-index: 1;
+    }
+
+    .option:hover .tip {
+      display: block;
+    }
+
+</style>
+</head>
+<body>
+  <header>
+    <div style="text-align: center; margin-top: 30px;">
+  <button onclick="window.location.href='index.html'" style="
+    background-color: #c4b677;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  ">
+    Voltar à Página Inicial
+  </button>
+</div>
+  </header>
+  <div class="quiz-container">
+    <h1>Descubra Seu Estilo de Decoração</h1>
+
+    <div class="question">
+      <h2>1. Qual cor você prefere para sua sala?</h2>
+
+      <div class="option">
+        <button>Branco e tons neutros</button>
+        <div class="tip">Estilo Escandinavo: Ideal para quem gosta de ambientes claros, limpos e minimalistas.</div>
+      </div>
+
+      <div class="option">
+        <button>Cores vibrantes</button>
+        <div class="tip">Estilo Boho: Perfeito para quem ama cores, estampas e um toque artístico.</div>
+      </div>
+
+      <div class="option">
+        <button>Tons terrosos</button>
+        <div class="tip">Estilo Rústico: Ótimo para criar ambientes acolhedores com madeira e natureza.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

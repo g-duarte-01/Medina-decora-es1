@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cortinas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+            <nav class="navegacao">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html">Início</a></li> 
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li><a href="sobre nós.html">Sobre nós</a></li>
+                </ul>
+
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar" aria-label="Campo de Pesquisa">
+                    <button type="submit" aria-label="Botão de Pesquisar">
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Ícone de Pesquisar">
+                    </button>
+                </div>
+
+                <div class="navegacao__usuario-cadastro">
+                    <button id="btn-abrir-login" class="navegacao__botao-icone" aria-label="Abrir Painel de Login">
+                        <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                            alt="Ícone de Usuário">
+                    </button>
+                    <button class="navegacao__botao-cadastro" onclick="location.href='./Cadastro.html'"> Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="slide-out-overlay" class="slide-out-overlay"></div>
+
+    <div id="slide-out-panel" class="slide-out-panel bg-white overflow-y-auto" 
+        role="dialog" aria-modal="true" aria-labelledby="panel-title">
+
+        <div class="w-full h-full p-6 relative">
+            <header class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Login</h2>
+                
+                <button id="btn-fechar-panel"
+                    class="text-gray-500 hover:text-gray-700 transition duration-150"
+                    aria-label="Fechar Painel de Login">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </header>
+
+            <form action="#" method="POST" class="flex flex-col gap-5">
+                <div>
+                    <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email-login" name="email" placeholder="ex.: usuario@domínio.com" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                    <input type="password" id="password-login" name="password" placeholder="••••••••" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit"
+                    class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                    style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                    Entrar
+                </button>
+            </form>
+
+            <footer class="mt-6 pt-4 border-t text-center">
+                <p class="text-sm text-gray-600">Não possui cadastro?
+                    <a href="./Cadastro.html"
+                        class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                        aria-label="Cadastre-se para criar uma nova conta">
+                        Cadastre-se
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </div>
+    </header>
+ <br>
+ <br>
+ <br>
+  <div class="produtos">
+    <div class="produto">
+      <img src="https://amofadas.cdn.magazord.com.br/img/2023/06/produto/2483/kit-de-capas-de-almofadas-decorativas-veludo-preto-e-branco-midnight.png?ims=fit-in/800x800/filters:fill(white)" alt="persiana 1" height="100px" width="100px">
+      <h2>Almofadas estampadas</h2>
+      
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="data:image/jpeg;base64,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" height="100px">
+      <h2>Almofadas lisas</h2>
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTesIlbjHx0l2o1D63rCexRpCGW5S319Qa7JQ&s" alt="persiana 3">
+      <h2>Almofada de Bola Veludo </h2>
+    
+    </div>
+  </div>
+ <div class="produtos">
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEIiUZfedu_olGbXn-S2sMT3N72AHHVH6AGQ&s" alt="persiana 4">
+      <h2>Almofadas com listras</h2>
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMGU69gM5olddtit0E_f226az9FxynnoDVww&s" alt="persiana 5">
+      <h2>Almofada de crochê</h2>
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14R15j0a5cqCMK6KPMBmMSQdvINmM4Zwxwg&s" alt="persiana 6">
+      <h2> Almofadas lisas </h2>
+    </div>
+  </div>
+   <!--RODAPÉ-->
+   <!--RODAPÉ-->
+    <footer class="rodape">
+        <div class="rodape__conteudo">
+            <div class="rodape__redes-sociais">
+                
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="./img/1161953_instagram_icon.png" alt="Instagram"></a>
+                <a href="https://pt-br.facebook.com/" aria-label="Facebook"><img src="./img/104498_facebook_icon.png" alt="Facebook"></a>
+                <a href="https://x.com/" aria-label="Twitter/X"><img src="./img/twitter.png" alt="Twitter/X"></a>
+            </div>
+            <div class="rodape__seguranca">
+                <img src="./img/segurança.svg" alt="Selo de segurança">
+                <p>Ambiente 100% seguro<br>Aqui sua informação é<br>protegida por criptografia</p>
+            </div>
+            <div class="rodape__links">
+                <a href="curiosidades.html">Curiosidades</a>
+                <a href="./contato.html">Contato</a>
+                <a href="trabalhe conosco.html">Trabalhe Conosco</a>
+                <a href="avaliações.html">Avaliações</a>
+                <a href="dúvidas.html">Dúvidas</a>
+                <a href="gestão financeira.html">Gestão financeira</a>
+                <a href="localização.html">Endereço</a>
+                <a href="./privacidade.html">Privacidade</a>
+                <a href="funcionamento.html">Horário de Funcionamento</a>
+                <a href="https://wa.me/+5511940028922" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Elementos do NOVO Painel Slide-out
+        const slideOutPanel = document.getElementById('slide-out-panel'); // Painel
+        const slideOutOverlay = document.getElementById('slide-out-overlay'); // Overlay
+        const btnAbrir = document.getElementById('btn-abrir-login'); // Botão na barra de navegação
+        const btnFechar = document.getElementById('btn-fechar-panel'); // Botão 'X' dentro do painel
+        const emailInput = document.getElementById('email-login');
+        // ----------------------------------------------------------------------------------------------------------------
+        // 3. LÓGICA DO NOVO PAINEL SLIDE-OUT DE LOGIN
+        // [LÓGICA ATUALIZADA]
+        // ----------------------------------------------------------------------------------------------------------------
+
+        /**
+         * Abre o painel deslizante, adicionando a classe 'is-open' e focando no campo de email.
+         */
+        function abrirLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.add('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.add('is-open');
+            // Remove a classe 'hidden' do body (se houver, para evitar rolagem de fundo, embora não estivesse no código original)
+            document.body.classList.add('overflow-hidden');
+            if (emailInput) emailInput.focus();
+        }
+
+        /**
+         * Fecha o painel deslizante, removendo a classe 'is-open'.
+         */
+        function fecharLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.remove('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.remove('is-open');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Event Listeners:
+        if (btnAbrir) btnAbrir.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirLoginPanel();
+        });
+
+        if (btnFechar) btnFechar.addEventListener('click', (e) => {
+            e.preventDefault();
+            fecharLoginPanel();
+        });
+
+        // Fechar ao clicar fora (no fundo escuro/overlay)
+        if (slideOutOverlay) slideOutOverlay.addEventListener('click', (e) => {
+            fecharLoginPanel();
+        });
+
+        // Fechar ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && slideOutPanel && slideOutPanel.classList.contains('is-open')) {
+                fecharLoginPanel();
+            }
+        });
+
+
+      
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 5. INICIALIZAÇÃO DE ÍCONES
+        // [CÓDIGO ORIGINAL MANTIDO]
+        // ----------------------------------------------------------------------------------------------------------------
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

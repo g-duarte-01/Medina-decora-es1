@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Medina Decorações</title>
+ <!-- O SEU ARQUIVO CSS EXTERNO FOI MANTIDO AQUI: -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Carrega Tailwind CSS CDN para o painel de login e estilos modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícone de Login (Lucide Icons) - Usado no painel e no botão de fechar -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+             <nav class="navegacao">
+                <ul class="navegacao__lista">
+                     <li><a href="index.html">Início</a></li>
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li> <a href="sobre nós.html">Sobre nós</a></li>
+
+                </ul>
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar">
+                    <button>
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Pesquisar">
+                    </button>
+                </div>
+
+                <!-- MODIFICAÇÃO MÍNIMA: O href foi alterado de './login.html' para '#login-panel' -->
+                <div class="navegacao__usuario-cadastro">
+                    <button class="navegacao__botao-icone">
+                        <!-- Ícone de Login - AGORA ABRE O PAINEL OFF-CANVAS -->
+                        <a href="#login-panel" aria-label="Abrir Painel de Login">
+                            <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                                alt="Usuário">
+                        </a>
+                    </button>
+                    <button class="navegacao__botao-cadastro">
+                        Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>🕒 Horário de Funcionamento</h1>
+    <br>
+    <br>
+    <h2><i>Queremos que você tenha a melhor experiência possível ao explorar nossos produtos.</i></h2>
+    <br>
+    <h3><b>Confira nossos horários de atendimento:</b></h3>
+    <br>
+    <br>
+    Loja Online — Atendimento ao Cliente
+    <br>
+    - Segunda a Sexta: 08h00 às 18h00
+    <br>
+    - Sábado: 09h00 às 14h00
+    <br>
+    - Domingos e Feriados: Fechado
+    <br>
+    📞 Suporte via WhatsApp e E-mail:
+    <br>
+    Estamos disponíveis durante o horário comercial para tirar dúvidas,
+    <br>
+    ajudar com pedidos e oferecer recomendações personalizadas.
+    <br>
+    ❕Para mais informações acesse nosso contato!
+    </p>
+     <!-- ------------------------------------- -->
+    <!-- PAINEL DESLIZANTE OFF-CANVAS (Side Drawer) - NOVO CONTEÚDO -->
+    <!-- ------------------------------------- -->
+    <div id="login-panel"
+        class="fixed top-0 right-0 h-full bg-white z-50 w-full sm:w-96 flex flex-col p-6 rounded-l-2xl" role="dialog"
+        aria-modal="true" aria-labelledby="panel-title">
+
+        <!-- Cabeçalho do Painel -->
+        <header class="flex justify-between items-center mb-6 border-b pb-4">
+            <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Entrar</h2>
+
+            <!-- Botão de Fechar - O href="#" reseta o hash do URL, fechando o painel. -->
+            <a href="#"
+                class="p-2 text-gray-500 hover:text-gray-900 transition duration-150 focus:ring-2 focus:ring-gray-300 rounded-full"
+                aria-label="Fechar Painel de Login">
+                <script>
+                    // Ícone de Fechar (Lucide Icon)
+                    document.write(lucide.createIcons()['x'].toSvg({ width: 24, height: 24, class: 'w-6 h-6' }));
+                </script>
+            </a>
+        </header>
+
+        <!-- Formulário de Login -->
+        <form action="#" method="POST" class="flex flex-col gap-5 flex-grow">
+
+            <!-- Campo Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <!-- O atributo required e type="email" ativam a validação CSS/HTML5 -->
+                <input type="email" id="email" name="email" placeholder="ex.: usuario@domínio.com" required
+                    class="email-field w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+
+                <!-- Mensagem de erro condicional (Mostra apenas se :invalid e não é placeholder-shown, via CSS) -->
+                <p class="error-message mt-1 text-sm text-red-600 hidden" aria-live="polite">Por favor, insira um
+                    formato de email válido.</p>
+            </div>
+
+            <!-- Campo Senha -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+            </div>
+
+            <!-- Botão de Ação Principal -->
+            <button type="submit"
+                class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                Entrar
+            </button>
+
+
+        </form>
+
+        <!-- Rodapé / Link de Cadastro -->
+        <footer class="mt-6 pt-4 border-t text-center">
+            <p class="text-sm text-gray-600">Não possui cadastro?
+                <!-- Link de redirecionamento para o cadastro -->
+                <a href="./Cadastro.html"
+                    class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                    aria-label="Cadastre-se para criar uma nova conta">
+                    Cadastre-se
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- OVERLAY (Backdrop) - Usado para fechar o painel ao clicar fora -->
+    <!-- O href="#" reseta o hash, fechando o painel e o overlay. -->
+    <a href="#" id="panel-overlay" class="fixed inset-0 bg-gray-900/50 z-40" aria-hidden="true"></a>
+
+    <script>
+        // Inicializa Lucide Icons
+        lucide.createIcons();
+    </script>
+    </body>

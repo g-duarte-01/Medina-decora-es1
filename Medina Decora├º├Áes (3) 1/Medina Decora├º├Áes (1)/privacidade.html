@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Medina Decorações</title>
+ <!-- O SEU ARQUIVO CSS EXTERNO FOI MANTIDO AQUI: -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Carrega Tailwind CSS CDN para o painel de login e estilos modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícone de Login (Lucide Icons) - Usado no painel e no botão de fechar -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+</head>
+
+<body>
+       <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+            
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+            
+            <nav class="navegacao">
+                <ul class="navegacao__lista">
+                     <li><a href="index.html">Início</a></li>
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li> <a href="sobre nós.html">Sobre nós</a></li>
+
+                </ul>
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar">
+                    <button>
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Pesquisar">
+                    </button>
+                </div>
+
+                <!-- MODIFICAÇÃO MÍNIMA: O href foi alterado de './login.html' para '#login-panel' -->
+                <div class="navegacao__usuario-cadastro">
+                    <button class="navegacao__botao-icone">
+                        <!-- Ícone de Login - AGORA ABRE O PAINEL OFF-CANVAS -->
+                        <a href="#login-panel" aria-label="Abrir Painel de Login">
+                            <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                                alt="Usuário">
+                        </a>
+                    </button>
+                    <button class="navegacao__botao-cadastro">
+                        Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="content">
+    <style>
+        /* Estilos específicos para o Infográfico de Privacidade */
+        .infografico-container {
+            font-family: 'Inter', sans-serif;
+            max-width: 90%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9; /* Fundo suave */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #dad3b8; /* Cor da marca */
+        }
+
+        .infografico-titulo {
+            text-align: center;
+            color: #715b25; /* Cor primária */
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+
+        .passos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .passo {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .passo-numero {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #b9a978; /* Cor secundária */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .passo-conteudo h3 {
+            color: #715b25;
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .passo-conteudo p {
+            margin: 5px 0 0 0;
+            color: #333333;
+            font-size: 0.95em;
+        }
+
+        /* Linha de conexão (apenas para telas maiores) */
+        .passos-container::before {
+            content: '';
+            position: absolute;
+            top: 100px; /* Ajustar conforme necessário */
+            bottom: 100px; /* Ajustar conforme necessário */
+            left: 50%;
+            width: 2px;
+            background-color: #dad3b8;
+            z-index: 0;
+            display: none; /* Esconder por padrão */
+        }
+
+        /* Responsividade para o infográfico */
+        @media (min-width: 768px) {
+            .passos-container {
+                flex-direction: row;
+                justify-content: space-between;
+                position: relative;
+            }
+
+            .passo {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                max-width: 30%;
+            }
+
+            .passo-conteudo {
+                text-align: center;
+            }
+
+            .passos-container::before {
+                display: block;
+            }
+            
+            /* Linhas de conexão entre os passos */
+            .passo:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                top: 20px;
+                right: -10%; /* Ajustar para conectar */
+                width: 20%;
+                height: 2px;
+                background-color: #dad3b8;
+                z-index: 0;
+            }
+        }
+        
+        /* Estilos da Política de Privacidade */
+        .politica-container {
+            padding: 20px;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        .politica-container h2 {
+            color: #715b25;
+            font-size: 1.8em;
+            margin-top: 30px;
+            border-bottom: 2px solid #dad3b8;
+            padding-bottom: 5px;
+        }
+
+        .politica-container h3 {
+            color: #b9a978;
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+
+        .politica-container p, .politica-container ul {
+            margin-bottom: 15px;
+        }
+
+        .politica-container ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .tabela-dados {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        .tabela-dados th, .tabela-dados td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .tabela-dados th {
+            background-color: #f2f2f2;
+            color: #715b25;
+            font-weight: 600;
+        }
+
+        /* Responsividade da Tabela */
+        @media (max-width: 600px) {
+            .tabela-dados, .tabela-dados thead, .tabela-dados tbody, .tabela-dados th, .tabela-dados td, .tabela-dados tr {
+                display: block;
+            }
+            .tabela-dados thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            .tabela-dados tr {
+                border: 1px solid #ccc;
+                margin-bottom: 10px;
+            }
+            .tabela-dados td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+            .tabela-dados td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 6px;
+                width: 45%;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #715b25;
+            }
+        }
+    </style>
+
+    <div class="politica-container">
+        <h2>Política de Privacidade - Medina Decorações</h2>
+
+        <p><strong>Última atualização:</strong> 10 de Novembro de 2025</p>
+
+        <p>A **Medina Decorações** tem um compromisso sério com a sua privacidade e a proteção dos seus dados pessoais. Esta Política de Privacidade, inspirada no modelo do Senac e adaptada à nossa realidade de e-commerce de decorações, explica de forma simples e clara como tratamos suas informações, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD).</p>
+
+        <h3>1. Informações que Coletamos</h3>
+        <p>Coletamos dados para oferecer a melhor experiência de compra e navegação.</p>
+
+        <table class="tabela-dados">
+            <thead>
+                <tr>
+                    <th>Categoria de Dados</th>
+                    <th>Exemplos de Dados Coletados</th>
+                    <th>Finalidade Principal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Categoria de Dados">Dados de Cadastro</td>
+                    <td data-label="Exemplos de Dados Coletados">Nome completo, CPF, e-mail, telefone, endereço de entrega e cobrança.</td>
+                    <td data-label="Finalidade Principal">Processar pedidos, emitir notas fiscais, gerenciar sua conta e comunicar sobre a compra.</td>
+                </tr>
+                <tr>
+                    <td data-label="Categoria de Dados">Dados de Navegação</td>
+                    <td data-label="Exemplos de Dados Coletados">Endereço IP, tipo de navegador, páginas visitadas, tempo de permanência, sequência de cliques.</td>
+                    <td data-label="Finalidade Principal">Melhorar o site, personalizar sua experiência (ex: produtos recomendados) e analisar o tráfego.</td>
+                </tr>
+                <tr>
+                    <td data-label="Categoria de Dados">Dados de Pagamento</td>
+                    <td data-label="Exemplos de Dados Coletados">Informações de cartão de crédito (criptografadas e processadas por terceiros), dados de boleto.</td>
+                    <td data-label="Finalidade Principal">Processar o pagamento de suas compras. **Não armazenamos dados completos de cartão.**</td>
+                </tr>
+                <tr>
+                    <td data-label="Categoria de Dados">Dados de Comunicação</td>
+                    <td data-label="Exemplos de Dados Coletados">Mensagens enviadas por e-mail, chat ou redes sociais.</td>
+                    <td data-label="Finalidade Principal">Responder dúvidas, sugestões, reclamações e prestar suporte ao cliente.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. Como Usamos Seus Dados Pessoais</h3>
+        <p>Seus dados são usados para:</p>
+        <ul>
+            <li>**Execução de Contrato:** Entregar os produtos que você comprou, processar pagamentos e gerenciar devoluções.</li>
+            <li>**Melhoria Contínua:** Analisar o uso do site para aprimorar a navegação, o design e a oferta de produtos.</li>
+            <li>**Marketing e Comunicação:** Enviar e-mails sobre promoções, novidades e produtos que possam ser do seu interesse (com a sua permissão).</li>
+            <li>**Segurança:** Prevenir fraudes e garantir a segurança das transações e do site.</li>
+            <li>**Obrigações Legais:** Cumprir determinações legais e regulatórias, como emissão de notas fiscais.</li>
+        </ul>
+
+        <h3>3. Compartilhamento de Dados</h3>
+        <p>Compartilhamos seus dados apenas quando estritamente necessário e com parceiros confiáveis:</p>
+        <ul>
+            <li>**Transportadoras e Logística:** Para realizar a entrega dos seus pedidos.</li>
+            <li>**Processadores de Pagamento:** Para processar transações financeiras de forma segura.</li>
+            <li>**Provedores de Serviço de TI:** Empresas que nos ajudam a manter o site e a infraestrutura de dados funcionando.</li>
+            <li>**Autoridades:** Em caso de obrigação legal ou ordem judicial.</li>
+        </ul>
+        <p>Exigimos que todos os parceiros sigam rigorosos padrões de segurança e privacidade, em conformidade com a LGPD.</p>
+
+        <h3>4. Cookies e Tecnologias Semelhantes</h3>
+        <p>Utilizamos cookies para:</p>
+        <ul>
+            <li>Lembrar itens no seu carrinho de compras.</li>
+            <li>Personalizar o conteúdo e os anúncios que você vê.</li>
+            <li>Analisar o tráfego do site e entender o comportamento dos usuários.</li>
+        </ul>
+        <p>Você pode gerenciar suas preferências de cookies a qualquer momento nas configurações do seu navegador.</p>
+
+        <h3>5. Seus Direitos (LGPD)</h3>
+        <p>Você tem o direito de:</p>
+        <ul>
+            <li>**Acesso:** Saber quais dados pessoais tratamos sobre você.</li>
+            <li>**Correção:** Solicitar a correção de dados incompletos, inexatos ou desatualizados.</li>
+            <li>**Anonimização/Bloqueio/Eliminação:** Solicitar que seus dados sejam anonimizados, bloqueados ou eliminados, quando cabível.</li>
+            <li>**Portabilidade:** Receber seus dados em um formato que permita a transferência para outro fornecedor de serviço.</li>
+            <li>**Revogação do Consentimento:** Retirar seu consentimento para o tratamento de dados a qualquer momento.</li>
+        </ul>
+        <p>Para exercer qualquer um desses direitos, entre em contato conosco pelo canal indicado na seção "Contato".</p>
+
+        <h3>6. Segurança</h3>
+        <p>Adotamos medidas técnicas e administrativas para proteger seus dados pessoais contra acessos não autorizados, perdas, destruição ou alteração. Isso inclui criptografia, firewalls e controle de acesso.</p>
+
+        <h3>7. Transferência de Dados</h3>
+        <p>Caso seus dados precisem ser transferidos para fora do Brasil (por exemplo, por meio de serviços de nuvem), garantimos que essa transferência ocorra apenas para países ou organizações que ofereçam um nível de proteção de dados pessoais adequado, conforme a legislação brasileira.</p>
+
+        <h3>8. Menores de Idade</h3>
+        <p>Nossos serviços são direcionados a adultos. Se você for menor de 18 anos, a compra deve ser realizada com a supervisão e consentimento de um responsável legal. Não coletamos intencionalmente dados de menores sem a devida autorização.</p>
+
+        <h3>9. Alterações na Política</h3>
+        <p>Podemos atualizar esta Política de Privacidade periodicamente. A versão mais recente será sempre publicada nesta página, e recomendamos que você a consulte regularmente. Em caso de alterações significativas, notificaremos você por e-mail ou aviso em destaque no site.</p>
+
+        <h3>10. Contato</h3>
+        <p>Em caso de dúvidas sobre esta Política ou sobre como tratamos seus dados, entre em contato com nosso Encarregado de Dados (DPO):</p>
+        <p>
+            **E-mail:** [Inserir E-mail de Contato/DPO]<br>
+            **Telefone:** [Inserir Telefone de Contato]
+        </p>
+        <p><strong>Observação de Conformidade:</strong> Esta política foi adaptada para o contexto de e-commerce de decorações, seguindo as diretrizes da Lei Geral de Proteção de Dados Pessoais (LGPD) e inspirada em modelos de boas práticas, como o do Senac, para garantir clareza e transparência.</p>
+    </div>
+
+    <div class="infografico-container">
+        <h2 class="infografico-titulo">Infográfico: Sua Privacidade em 3 Passos Simples</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: #555;">Entenda de forma rápida como seus dados são tratados na Medina Decorações.</p>
+        
+        <div class="passos-container">
+            <div class="passo">
+                <div class="passo-numero">1</div>
+                <div class="passo-conteudo">
+                    <h3>Coleta Segura</h3>
+                    <p><strong>O que acontece:</strong> Você navega, se cadastra ou faz uma compra.</p>
+                    <p><strong>Seus Dados:</strong> Nome, e-mail, endereço, etc.</p>
+                    <p><strong>Nosso Compromisso:</strong> Coletamos apenas o essencial para a sua experiência, com transparência.</p>
+                </div>
+            </div>
+            
+            <div class="passo">
+                <div class="passo-numero">2</div>
+                <div class="passo-conteudo">
+                    <h3>Uso Responsável</h3>
+                    <p><strong>O que acontece:</strong> Usamos seus dados para processar seu pedido e melhorar o site.</p>
+                    <p><strong>Nossa Ação:</strong> Processamento de pagamento, envio de produtos, personalização de ofertas.</p>
+                    <p><strong>Seu Controle:</strong> Você decide se quer receber nossas comunicações de marketing.</p>
+                </div>
+            </div>
+            
+            <div class="passo">
+                <div class="passo-numero">3</div>
+                <div class="passo-conteudo">
+                    <h3>Proteção Total</h3>
+                    <p><strong>O que acontece:</strong> Seus dados estão seguros.</p>
+                    <p><strong>Medidas:</strong> Criptografia, firewalls e compartilhamento apenas com parceiros de confiança (transportadora, pagamento).</p>
+                    <p><strong>Seus Direitos:</strong> Você pode acessar, corrigir ou pedir a exclusão dos seus dados a qualquer momento, conforme a LGPD.</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #715b25; font-weight: 600;">Conformidade: Estamos 100% em conformidade com a LGPD.</p>
+    </div>
+</section>
+    </main>
+     <!-- ------------------------------------- -->
+    <!-- PAINEL DESLIZANTE OFF-CANVAS (Side Drawer) - NOVO CONTEÚDO -->
+    <!-- ------------------------------------- -->
+    <div id="login-panel"
+        class="fixed top-0 right-0 h-full bg-white z-50 w-full sm:w-96 flex flex-col p-6 rounded-l-2xl" role="dialog"
+        aria-modal="true" aria-labelledby="panel-title">
+
+        <!-- Cabeçalho do Painel -->
+        <header class="flex justify-between items-center mb-6 border-b pb-4">
+            <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Entrar</h2>
+
+            <!-- Botão de Fechar - O href="#" reseta o hash do URL, fechando o painel. -->
+            <a href="#"
+                class="p-2 text-gray-500 hover:text-gray-900 transition duration-150 focus:ring-2 focus:ring-gray-300 rounded-full"
+                aria-label="Fechar Painel de Login">
+                <script>
+                    // Ícone de Fechar (Lucide Icon)
+                    document.write(lucide.createIcons()['x'].toSvg({ width: 24, height: 24, class: 'w-6 h-6' }));
+                </script>
+            </a>
+        </header>
+
+        <!-- Formulário de Login -->
+        <form action="#" method="POST" class="flex flex-col gap-5 flex-grow">
+
+            <!-- Campo Email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <!-- O atributo required e type="email" ativam a validação CSS/HTML5 -->
+                <input type="email" id="email" name="email" placeholder="ex.: usuario@domínio.com" required
+                    class="email-field w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+
+                <!-- Mensagem de erro condicional (Mostra apenas se :invalid e não é placeholder-shown, via CSS) -->
+                <p class="error-message mt-1 text-sm text-red-600 hidden" aria-live="polite">Por favor, insira um
+                    formato de email válido.</p>
+            </div>
+
+            <!-- Campo Senha -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+            </div>
+
+            <!-- Botão de Ação Principal -->
+            <button type="submit"
+                class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                Entrar
+            </button>
+
+
+        </form>
+
+        <!-- Rodapé / Link de Cadastro -->
+        <footer class="mt-6 pt-4 border-t text-center">
+            <p class="text-sm text-gray-600">Não possui cadastro?
+                <!-- Link de redirecionamento para o cadastro -->
+                <a href="./Cadastro.html"
+                    class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                    aria-label="Cadastre-se para criar uma nova conta">
+                    Cadastre-se
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- OVERLAY (Backdrop) - Usado para fechar o painel ao clicar fora -->
+    <!-- O href="#" reseta o hash, fechando o painel e o overlay. -->
+    <a href="#" id="panel-overlay" class="fixed inset-0 bg-gray-900/50 z-40" aria-hidden="true"></a>
+
+    <script>
+        // Inicializa Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

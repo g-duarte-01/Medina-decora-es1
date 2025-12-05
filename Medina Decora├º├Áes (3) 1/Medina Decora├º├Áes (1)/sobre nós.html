@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cortinas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            background-color: #dad3b8;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #715b25 (0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #715b25;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #715b25;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+            <nav class="navegacao">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html">Início</a></li> 
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li><a href="sobre nós.html">Sobre nós</a></li>
+                </ul>
+
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar" aria-label="Campo de Pesquisa">
+                    <button type="submit" aria-label="Botão de Pesquisar">
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Ícone de Pesquisar">
+                    </button>
+                </div>
+
+                <div class="navegacao__usuario-cadastro">
+                    <button id="btn-abrir-login" class="navegacao__botao-icone" aria-label="Abrir Painel de Login">
+                        <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                            alt="Ícone de Usuário">
+                    </button>
+                    <button class="navegacao__botao-cadastro" onclick="location.href='./Cadastro.html'"> Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="slide-out-overlay" class="slide-out-overlay"></div>
+
+    <div id="slide-out-panel" class="slide-out-panel bg-white overflow-y-auto" 
+        role="dialog" aria-modal="true" aria-labelledby="panel-title">
+
+        <div class="w-full h-full p-6 relative">
+            <header class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Login</h2>
+                
+                <button id="btn-fechar-panel"
+                    class="text-gray-500 hover:text-gray-700 transition duration-150"
+                    aria-label="Fechar Painel de Login">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </header>
+
+            <form action="#" method="POST" class="flex flex-col gap-5">
+                <div>
+                    <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email-login" name="email" placeholder="ex.: usuario@domínio.com" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                    <input type="password" id="password-login" name="password" placeholder="••••••••" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit"
+                    class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                    style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                    Entrar
+                </button>
+            </form>
+
+            <footer class="mt-6 pt-4 border-t text-center">
+                <p class="text-sm text-gray-600">Não possui cadastro?
+                    <a href="./Cadastro.html"
+                        class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                        aria-label="Cadastre-se para criar uma nova conta">
+                        Cadastre-se
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </div>
+ 
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Nosso site</h1>
+        <p> Temos a satisfação em tê-lo em nosso site e compreender o seu bom gosto e assim, tangibilizá-lo na sua
+            decoração de ambientes, para assim, torná-lo realidade, tangibilizando os seus desejos de bom gosto e
+            elegância ! </p>
+        <P> Entre em nosso site e navegue nesta sublime experiência em imersão ao bom gosto e superlativo requinte !</P>
+
+        <h1>Quem Somos</h1>
+        <p>Na <span class="highlight">Medina Decorações</span>, acreditamos que cada espaço tem um tema especial — e
+            nosso propósito é revelá-lo através do design. Somos uma empresa especializada em estilização e decoração de
+            ambientes, unindo estética, conforto e funcionalidade em cada projeto.</p>
+        <p>Inspirados pela harmonia entre o belo e o essencial, criamos composições únicas que refletem a identidade e o
+            estilo de vida de cada cliente.</p>
+        <p>Nosso trabalho vai além da decoração: traduzimos emoções em cores, texturas e formas, transformando ambientes
+            em experiências sensoriais e memoráveis.</p>
+        <p>Medina decor é um site de uma empresa, especialmente, focada em estilização e decoração de ambientes.
+
+        <h2>Nossa Missão</h2>
+        <p>Transformar espaços em expressões autênticas de personalidade e bem-estar, oferecendo soluções de design que
+            unem sofisticação, criatividade e propósito.</p>
+        <p>Buscamos constantemente a excelência em cada detalhe — desde a escolha dos materiais até a harmonia final do
+            ambiente — para proporcionar beleza, conforto e inspiração em cada projeto.</p>
+
+        <h2>Nossa Visão</h2>
+        <p>Ser referência em decoração e estilização de interiores, reconhecida pela capacidade de inovar com elegância
+            e criar ambientes que despertam sensações, contam histórias e inspiram novas formas de viver.</p>
+        <p>Queremos construir um legado de bom gosto, sustentabilidade e sensibilidade estética, elevando o padrão da
+            decoração contemporânea.</p>
+    </div>
+    <script>
+        // Elementos do NOVO Painel Slide-out
+        const slideOutPanel = document.getElementById('slide-out-panel'); // Painel
+        const slideOutOverlay = document.getElementById('slide-out-overlay'); // Overlay
+        const btnAbrir = document.getElementById('btn-abrir-login'); // Botão na barra de navegação
+        const btnFechar = document.getElementById('btn-fechar-panel'); // Botão 'X' dentro do painel
+        const emailInput = document.getElementById('email-login');
+        // ----------------------------------------------------------------------------------------------------------------
+        // 3. LÓGICA DO NOVO PAINEL SLIDE-OUT DE LOGIN
+        // [LÓGICA ATUALIZADA]
+        // ----------------------------------------------------------------------------------------------------------------
+
+        /**
+         * Abre o painel deslizante, adicionando a classe 'is-open' e focando no campo de email.
+         */
+        function abrirLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.add('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.add('is-open');
+            // Remove a classe 'hidden' do body (se houver, para evitar rolagem de fundo, embora não estivesse no código original)
+            document.body.classList.add('overflow-hidden');
+            if (emailInput) emailInput.focus();
+        }
+
+        /**
+         * Fecha o painel deslizante, removendo a classe 'is-open'.
+         */
+        function fecharLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.remove('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.remove('is-open');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Event Listeners:
+        if (btnAbrir) btnAbrir.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirLoginPanel();
+        });
+
+        if (btnFechar) btnFechar.addEventListener('click', (e) => {
+            e.preventDefault();
+            fecharLoginPanel();
+        });
+
+        // Fechar ao clicar fora (no fundo escuro/overlay)
+        if (slideOutOverlay) slideOutOverlay.addEventListener('click', (e) => {
+            fecharLoginPanel();
+        });
+
+        // Fechar ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && slideOutPanel && slideOutPanel.classList.contains('is-open')) {
+                fecharLoginPanel();
+            }
+        });
+
+
+      
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 5. INICIALIZAÇÃO DE ÍCONES
+        // [CÓDIGO ORIGINAL MANTIDO]
+        // ----------------------------------------------------------------------------------------------------------------
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

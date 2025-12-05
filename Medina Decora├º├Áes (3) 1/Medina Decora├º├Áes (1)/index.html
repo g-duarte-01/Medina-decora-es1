@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Página Inicial - Medina Decorações</title>
+
+    <script src="https://cdn.tailwindcss.com"></script> <link rel="stylesheet" href="./css/style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> </head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+            <nav class="navegacao">
+                <ul class="navegacao__lista">
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li><a href="sobre nós.html">Sobre nós</a></li>
+                </ul>
+
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar" aria-label="Campo de Pesquisa">
+                    <button type="submit" aria-label="Botão de Pesquisar">
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Ícone de Pesquisar">
+                    </button>
+                </div>
+
+                <div class="navegacao__usuario-cadastro">
+                    <button id="btn-abrir-login" class="navegacao__botao-icone" aria-label="Abrir Painel de Login">
+                        <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                            alt="Ícone de Usuário">
+                    </button>
+                    <button class="navegacao__botao-cadastro" onclick="location.href='./Cadastro.html'"> Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="slide-out-overlay" class="slide-out-overlay"></div>
+
+    <div id="slide-out-panel" class="slide-out-panel bg-white overflow-y-auto" 
+        role="dialog" aria-modal="true" aria-labelledby="panel-title">
+
+        <div class="w-full h-full p-6 relative">
+            <header class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Login</h2>
+                
+                <button id="btn-fechar-panel"
+                    class="text-gray-500 hover:text-gray-700 transition duration-150"
+                    aria-label="Fechar Painel de Login">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </header>
+
+            <form action="#" method="POST" class="flex flex-col gap-5">
+                <div>
+                    <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email-login" name="email" placeholder="ex.: usuario@domínio.com" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                    <input type="password" id="password-login" name="password" placeholder="••••••••" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit"
+                    class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                    style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                    Entrar
+                </button>
+            </form>
+
+            <footer class="mt-6 pt-4 border-t text-center">
+                <p class="text-sm text-gray-600">Não possui cadastro?
+                    <a href="./Cadastro.html"
+                        class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                        aria-label="Cadastre-se para criar uma nova conta">
+                        Cadastre-se
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </div>
+    
+    <main class="principal">
+        <section class="carrossel">
+            <img class="carrossel__imagem" src="img/carrosel3.jpg" alt="Coleção de almofadas">
+            <img class="carrossel__imagem" src="img/carrosel2.jpg" alt="Coleção de Persianas">
+            <img class="carrossel__imagem" src="img/carrosel1.jpg" alt="Coleção de Cortinas">
+            <div class="carrossel__overlay"></div>
+            <h2 class="carrossel__titulo">Lançamento<br>Primavera/Verão<br>2026</h2>
+        </section>
+
+        <section class="destaques">
+            <h2 class="destaques__titulo">Destaques</h2>
+            <section class="contador">
+                <h2>Nossa loja cresce cada vez mais!</h2>
+                <div class="contador__numeros">
+                    <div class="item">
+                        <span class="numero" data-alvo="1500">0</span>
+                        <p>Clientes satisfeitos</p>
+                    </div>
+                    <div class="item">
+                        <span class="numero" data-alvo="50">0</span>
+                        <p>Projetos entregues</p>
+                    </div>
+                    <div class="item">
+                        <span class="numero" data-alvo="50">0</span>
+                        <p>Novos produtos</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="selecao-completa">
+            <h2 class="selecao-completa__titulo">CONFIRA A SELEÇÃO COMPLETA</h2>
+
+            <div id="carousel-superior" class="custom-carousel">
+                <div class="cards-container">
+                    <div class="card"> <img src="./img/Cortinas.jpg" alt="Cortinas"> <h3>Cortinas</h3> <a href="cortina1.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="./img/Persianas.jpg" alt="Persianas"> <h3>Persianas</h3> <a href="Persiana1.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="./img/Tapetes.jpg" alt="Tapetes"> <h3>Tapetes</h3> <a href="tapetes1.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="./img/Almofadas2.jpg" alt="Almofadas"> <h3>Almofadas</h3> <a href="almofadas1.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="img/carrosel cortina.jpg" alt="Cortinas Novas"> <h3>Cortinas Novas</h3> <a href="cortinas-novas carrosel.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="./img/carrosel persianas.jpg" alt="Persianas Novas"> <h3>Persianas automatizadas</h3> <a href="persianas novas-carrosel.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="./img/lustre carrosel.jpg" alt="Lustre Coleção"> <h3>Lustre Coleção</h3> <a href="lustre.html" class="card__link">Ver Mais</a> </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Anterior" onclick="scrollCarousel('carousel-superior', -1)">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button class="carousel-control next" aria-label="Próximo" onclick="scrollCarousel('carousel-superior', 1)">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <br>
+
+            <div id="carousel-inferior" class="custom-carousel">
+                <div class="cards-container">
+                    <div class="card"> <img src="https://cdn.awsli.com.br/600x700/1599/1599132/produto/331384860/mesa5-qvflx5fv1n.JPG" alt="Imagem de Cortinas" alt="Cortinas"> <h3>cadeira de jantar</h3> <a href="cortinas carrosel.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="img/carrosel almofadas.jpg" alt="Almofadas"> <h3>Almofadas </h3> <a href="almofadas.carrosel.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="img/tapetes carrosel.jpg" alt="Tapetes"> <h3>Tapetes </h3> <a href="tapetes1.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="img/persianascarrossel.jpg" alt="Persianas"> <h3>Persianas </h3> <a href="Persiana1.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="./img/almofadascarrosel.jpg" alt="Almofadas"> <h3> Almofadas</h3> <a href="amofadas novas-carrosel.html" class="card__link">Ver Mais</a> </div>
+                    <div class="card"> <img src="img/cortinascarrosel.jpg" alt="Cortinas"> <h3> Cortinas</h3> <a href="cortina-2carrosel.html" class="card__link">Ver Mais</a> </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Anterior" onclick="scrollCarousel('carousel-inferior', -1)">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button class="carousel-control next" aria-label="Próximo" onclick="scrollCarousel('carousel-inferior', 1)">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape__conteudo">
+            <div class="rodape__redes-sociais">
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="./img/1161953_instagram_icon.png" alt="Instagram"></a>
+                <a href="https://pt-br.facebook.com/" aria-label="Facebook"><img src="./img/104498_facebook_icon.png" alt="Facebook"></a>
+                <a href="https://x.com/" aria-label="Twitter/X"><img src="./img/twitter.png" alt="Twitter/X"></a>
+            </div>
+            <div class="rodape__seguranca">
+                <img src="./img/segurança.svg" alt="Selo de segurança">
+                <p>Ambiente 100% seguro<br>Aqui sua informação é<br>protegida por criptografia</p>
+            </div>
+            <div class="rodape__links">
+                <a href="curiosidades.html">Curiosidades</a>
+                <a href="./contato.html">Contato</a>
+                <a href="trabalhe conosco.html">Trabalhe Conosco</a>
+                <a href="avaliações.html">Avaliações</a>
+                <a href="dúvidas.html">Dúvidas</a>
+                <a href="gestão financeira.html">Gestão financeira</a>
+                <a href="localização.html">Endereço</a>
+                <a href="./privacidade.html">Privacidade</a>
+                <a href="funcionamento.html">Horário de Funcionamento</a>
+                <a href="https://wa.me/+5511940028922" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ----------------------------------------------------------------------------------------------------------------
+        // SELEÇÃO DE ELEMENTOS GLOBAIS
+        // Propósito: Obter referências aos elementos HTML que serão manipulados pelo JavaScript.
+        // Lógica: Utiliza `document.querySelectorAll` e `document.getElementById` para capturar os elementos.
+        // ----------------------------------------------------------------------------------------------------------------
+        const imagensCarrossel = document.querySelectorAll('.carrossel__imagem'); // Imagens do Carrossel principal.
+        const numerosContador = document.querySelectorAll('.numero');             // Spans dos números do contador animado.
+        
+        // Elementos do NOVO Painel Slide-out (Modal de Login)
+        const slideOutPanel = document.getElementById('slide-out-panel');       // Painel que desliza.
+        const slideOutOverlay = document.getElementById('slide-out-overlay');   // Overlay (fundo escuro).
+        const btnAbrir = document.getElementById('btn-abrir-login');           // Botão para abrir o painel.
+        const btnFechar = document.getElementById('btn-fechar-panel');         // Botão 'X' para fechar o painel.
+        const emailInput = document.getElementById('email-login');             // Campo de email (para focar ao abrir).
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 1. CARROSSEL DE IMAGENS PRINCIPAL (HEADER)
+        // Função: Alternar as imagens do carrossel em um intervalo de tempo, criando uma animação automática.
+        // Lógica: Utiliza `setInterval` para chamar a função `proximaImagem` periodicamente.
+        // ----------------------------------------------------------------------------------------------------------------
+        let indiceAtual = 0;             // Variável que armazena o índice da imagem atualmente visível.
+        const TEMPO_TROCA = 4000;        // Constante definindo o intervalo de tempo em milissegundos (4 segundos).
+
+        /**
+         * Função: Exibe a imagem no índice especificado.
+         * Lógica: Remove a classe 'ativa' de todas as imagens e adiciona-a à imagem do índice desejado.
+         * A classe 'ativa' (definida no CSS) controla a visibilidade (opacidade e display/z-index)
+         * e aplica a transição (fade-in/out).
+         * @param {number} indice - O índice da imagem a ser exibida.
+         */
+        function mostrarImagem(indice) {
+            // Itera sobre todas as imagens e remove a classe 'ativa' para escondê-las.
+            imagensCarrossel.forEach(img => img.classList.remove('ativa'));
+            // Verifica se o índice é válido e adiciona a classe 'ativa' para exibir a imagem com animação.
+            if (imagensCarrossel[indice]) {
+                imagensCarrossel[indice].classList.add('ativa');
+            }
+        }
+
+        /**
+         * Função: Calcula o índice da próxima imagem.
+         * Lógica: Incrementa o índiceAtual e usa o operador módulo (%) para garantir que ele volte para 0
+         * após a última imagem, criando um loop infinito.
+         */
+        function proximaImagem() {
+            // Calcula o novo índice, garantindo que ele não ultrapasse o número de imagens.
+            indiceAtual = (indiceAtual + 1) % imagensCarrossel.length;
+            // Exibe a próxima imagem.
+            mostrarImagem(indiceAtual);
+        }
+        
+        // Inicializa o carrossel: exibe a primeira imagem e configura o temporizador para a troca automática.
+        if (imagensCarrossel.length > 0) {
+            mostrarImagem(indiceAtual);
+            // Configura o temporizador para chamar 'proximaImagem' a cada TEMPO_TROCA.
+            setInterval(proximaImagem, TEMPO_TROCA);
+        }
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 2. CONTADOR ANIMADO (DESTAQUES)
+        // Função: Animar a contagem dos números de 0 até o valor definido no atributo `data-alvo`.
+        // Lógica: Utiliza `setInterval` para incrementar gradualmente o número.
+        // ----------------------------------------------------------------------------------------------------------------
+        // Itera sobre cada elemento `span` com a classe `numero`.
+        numerosContador.forEach(num => {
+            // Obtém o valor final do alvo a partir do atributo `data-alvo`.
+            const alvo = parseInt(num.getAttribute('data-alvo'));
+            let contador = 0;
+            // Calcula o valor de incremento em cada passo (aproximadamente 100 passos).
+            const incremento = Math.ceil(alvo / 100); 
+
+            // Configura um intervalo para a animação.
+            const intervalo = setInterval(() => {
+                // Enquanto o contador não atingir o alvo:
+                if (contador < alvo) {
+                    // Incrementa o valor.
+                    contador += incremento;
+                    // Atualiza o texto, formatando com separador de milhares (`toLocaleString('pt-BR')`).
+                    num.textContent = contador.toLocaleString('pt-BR');
+                } else {
+                    // Quando o alvo for atingido (ou ultrapassado), define o valor exato do alvo.
+                    num.textContent = alvo.toLocaleString('pt-BR');
+                    // Para a animação do contador.
+                    clearInterval(intervalo);
+                }
+            }, 100); // Intervalo de 100 milissegundos para uma animação suave.
+        });
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 3. LÓGICA DO NOVO PAINEL SLIDE-OUT DE LOGIN (MODAL)
+        // Função: Controlar a abertura, fechamento e acessibilidade do painel deslizante de login.
+        // Lógica: Manipulação de classes CSS ('is-open') e eventos de clique/teclado.
+        // ----------------------------------------------------------------------------------------------------------------
+
+        /**
+         * Função: Abre o painel deslizante.
+         * Lógica: Adiciona a classe 'is-open' (ativa a transição CSS), bloqueia a rolagem do body
+         * e move o foco para o primeiro campo (email) para acessibilidade.
+         */
+        function abrirLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.add('is-open');      // Abre o painel (transform).
+            if (slideOutOverlay) slideOutOverlay.classList.add('is-open');  // Mostra o overlay (opacidade).
+            // Adiciona classe para desabilitar a rolagem da página principal (melhora a experiência do modal).
+            document.body.classList.add('overflow-hidden');
+            if (emailInput) emailInput.focus();                             // Move o foco para o input de email.
+        }
+
+        /**
+         * Função: Fecha o painel deslizante.
+         * Lógica: Remove a classe 'is-open' (inicia a animação de retorno/esconde) e reabilita a rolagem do body.
+         */
+        function fecharLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.remove('is-open');     // Fecha o painel.
+            if (slideOutOverlay) slideOutOverlay.classList.remove('is-open'); // Esconde o overlay.
+            // Remove a classe para reabilitar a rolagem da página.
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // --- EVENT LISTENERS para o Painel de Login ---
+
+        // Evento: Clique no botão 'Abrir Login' (ícone de usuário).
+        if (btnAbrir) btnAbrir.addEventListener('click', (e) => {
+            e.preventDefault(); // Previne a ação padrão (se houver, embora um botão não tenha).
+            abrirLoginPanel();  // Chama a função de abertura.
+        });
+
+        // Evento: Clique no botão 'Fechar' (ícone 'X').
+        if (btnFechar) btnFechar.addEventListener('click', (e) => {
+            e.preventDefault(); // Previne a ação padrão.
+            fecharLoginPanel(); // Chama a função de fechamento.
+        });
+
+        // Evento: Clique no Overlay (fundo escuro).
+        // Propósito: Fechar o painel quando o usuário clica fora dele (fora do painel, mas dentro da tela).
+        if (slideOutOverlay) slideOutOverlay.addEventListener('click', (e) => {
+            fecharLoginPanel(); // Chama a função de fechamento.
+        });
+
+        // Evento: Pressionar tecla no documento.
+        // Propósito: Fechar o painel quando a tecla ESC for pressionada (melhora a acessibilidade/usabilidade).
+        document.addEventListener('keydown', (e) => {
+            // Verifica se a tecla é 'Escape' E se o painel está aberto.
+            if (e.key === 'Escape' && slideOutPanel && slideOutPanel.classList.contains('is-open')) {
+                fecharLoginPanel(); // Chama a função de fechamento.
+            }
+        });
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 4. CARROSSEL DE CARDS (ROLAGEM MANUAL)
+        // Função: Rolar horizontalmente o container de cards em resposta ao clique nos botões de controle.
+        // Lógica: Utiliza a API `scrollBy` da DOM para aplicar uma rolagem suave.
+        // ----------------------------------------------------------------------------------------------------------------
+        /**
+         * Função: Rola o carrossel horizontalmente.
+         * @param {string} carouselId - O ID do elemento `div.custom-carousel`.
+         * @param {number} direction - -1 para rolar para a esquerda (anterior), 1 para a direita (próximo).
+         */
+        function scrollCarousel(carouselId, direction) {
+            // Obtém o elemento pai (o carrossel completo).
+            const carousel = document.getElementById(carouselId);
+            // Encontra o container interno que contém os cards e que será rolado.
+            const container = carousel.querySelector('.cards-container');
+
+            if (container) {
+                // Define o valor de rolagem (duas vezes a largura de um card, aproximadamente 270px).
+                const scrollAmount = 270 * 2;
+                // Aplica a rolagem ao container, usando o método `scrollBy` para rolagem relativa.
+                container.scrollBy({
+                    left: direction * scrollAmount, // Calcula o deslocamento (positivo ou negativo).
+                    behavior: 'smooth'             // Garante que a rolagem seja animada/suave.
+                });
+            }
+        }
+        // Torna a função acessível globalmente (necessário porque é chamada via `onclick` no HTML).
+        window.scrollCarousel = scrollCarousel;
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 5. INICIALIZAÇÃO DE ÍCONES (Lucide)
+        // Função: Renderiza os ícones SVG definidos pelos atributos `data-lucide` no HTML.
+        // Lógica: Chamada de função da biblioteca externa (MANTIDO CONFORME ORIGINAL).
+        // ----------------------------------------------------------------------------------------------------------------
+        // Esta linha deve ser reescrita se for necessário remover dependências de frameworks/bibliotecas.
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

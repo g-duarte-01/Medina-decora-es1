@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cortinas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+            <nav class="navegacao">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html">Início</a></li> 
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li><a href="sobre nós.html">Sobre nós</a></li>
+                </ul>
+
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar" aria-label="Campo de Pesquisa">
+                    <button type="submit" aria-label="Botão de Pesquisar">
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Ícone de Pesquisar">
+                    </button>
+                </div>
+
+                <div class="navegacao__usuario-cadastro">
+                    <button id="btn-abrir-login" class="navegacao__botao-icone" aria-label="Abrir Painel de Login">
+                        <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                            alt="Ícone de Usuário">
+                    </button>
+                    <button class="navegacao__botao-cadastro" onclick="location.href='./Cadastro.html'"> Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="slide-out-overlay" class="slide-out-overlay"></div>
+
+    <div id="slide-out-panel" class="slide-out-panel bg-white overflow-y-auto" 
+        role="dialog" aria-modal="true" aria-labelledby="panel-title">
+
+        <div class="w-full h-full p-6 relative">
+            <header class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Login</h2>
+                
+                <button id="btn-fechar-panel"
+                    class="text-gray-500 hover:text-gray-700 transition duration-150"
+                    aria-label="Fechar Painel de Login">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </header>
+
+            <form action="#" method="POST" class="flex flex-col gap-5">
+                <div>
+                    <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email-login" name="email" placeholder="ex.: usuario@domínio.com" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                    <input type="password" id="password-login" name="password" placeholder="••••••••" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit"
+                    class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                    style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                    Entrar
+                </button>
+            </form>
+
+            <footer class="mt-6 pt-4 border-t text-center">
+                <p class="text-sm text-gray-600">Não possui cadastro?
+                    <a href="./Cadastro.html"
+                        class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                        aria-label="Cadastre-se para criar uma nova conta">
+                        Cadastre-se
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </div>
+    </header>
+  <br>
+  <br>
+  <br>
+
+  <div class="produtos">
+    <div class="produto">
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Tapete 1" height="100px" width="100px">
+      <h2>Tapete Sisal</h2>
+
+
+    </div>
+
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/3933278/pexels-photo-3933278.jpeg"="Tapete 2" height="100px">
+      <h2>Tapete Oriental</h2>
+
+    </div>
+
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/17926439/pexels-photo-17926439.jpeg" alt="Tapete 3">
+      <h2>Tapete Geométrico</h2>
+
+    </div>
+  </div>
+  <div class="produtos">
+    <div class="produto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkCJteqtsEFrOP8qSO-4I7YAX7t8Fjiwp_g&s"
+        alt="Tapete 4">
+      <h2>Tapete Moderno</h2>
+
+    </div>
+
+    <div class="produto">
+      <img
+        src="https://static.mobly.com.br/p/Saturs-Tapetes-Tapete-Pelo-Alto-Felpudo-Macio-Anti-Derrapante-Anti-AlC3A9rgico-Vermelho---120-x-200-cm-Tapete-para-Sala-e-Quartos-9095-724214-1.jpg"
+        alt="Tapete 5">
+      <h2>Tapete de Lã</h2>
+
+    </div>
+
+    <div class="produto">
+      <img
+        src="https://66392.cdn.simplo7.net/static/66392/sku/tapetes-tapete-para-sala-e-quarto-nacional-rl-curvas-cinza-51-1727448095450.jpeg"
+        alt="Tapete 6">
+      <h2>Tapete Geométrico</h2>
+    </div>
+  </div>
+
+</body>
+<!--RODAPÉ-->
+<!--RODAPÉ-->
+    <footer class="rodape">
+        <div class="rodape__conteudo">
+            <div class="rodape__redes-sociais">
+                
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="./img/1161953_instagram_icon.png" alt="Instagram"></a>
+                <a href="https://pt-br.facebook.com/" aria-label="Facebook"><img src="./img/104498_facebook_icon.png" alt="Facebook"></a>
+                <a href="https://x.com/" aria-label="Twitter/X"><img src="./img/twitter.png" alt="Twitter/X"></a>
+            </div>
+            <div class="rodape__seguranca">
+                <img src="./img/segurança.svg" alt="Selo de segurança">
+                <p>Ambiente 100% seguro<br>Aqui sua informação é<br>protegida por criptografia</p>
+            </div>
+            <div class="rodape__links">
+                <a href="curiosidades.html">Curiosidades</a>
+                <a href="./contato.html">Contato</a>
+                <a href="trabalhe conosco.html">Trabalhe Conosco</a>
+                <a href="avaliações.html">Avaliações</a>
+                <a href="dúvidas.html">Dúvidas</a>
+                <a href="gestão financeira.html">Gestão financeira</a>
+                <a href="localização.html">Endereço</a>
+                <a href="./privacidade.html">Privacidade</a>
+                <a href="funcionamento.html">Horário de Funcionamento</a>
+                <a href="https://wa.me/+5511940028922" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Elementos do NOVO Painel Slide-out
+        const slideOutPanel = document.getElementById('slide-out-panel'); // Painel
+        const slideOutOverlay = document.getElementById('slide-out-overlay'); // Overlay
+        const btnAbrir = document.getElementById('btn-abrir-login'); // Botão na barra de navegação
+        const btnFechar = document.getElementById('btn-fechar-panel'); // Botão 'X' dentro do painel
+        const emailInput = document.getElementById('email-login');
+        // ----------------------------------------------------------------------------------------------------------------
+        // 3. LÓGICA DO NOVO PAINEL SLIDE-OUT DE LOGIN
+        // [LÓGICA ATUALIZADA]
+        // ----------------------------------------------------------------------------------------------------------------
+
+        /**
+         * Abre o painel deslizante, adicionando a classe 'is-open' e focando no campo de email.
+         */
+        function abrirLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.add('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.add('is-open');
+            // Remove a classe 'hidden' do body (se houver, para evitar rolagem de fundo, embora não estivesse no código original)
+            document.body.classList.add('overflow-hidden');
+            if (emailInput) emailInput.focus();
+        }
+
+        /**
+         * Fecha o painel deslizante, removendo a classe 'is-open'.
+         */
+        function fecharLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.remove('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.remove('is-open');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Event Listeners:
+        if (btnAbrir) btnAbrir.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirLoginPanel();
+        });
+
+        if (btnFechar) btnFechar.addEventListener('click', (e) => {
+            e.preventDefault();
+            fecharLoginPanel();
+        });
+
+        // Fechar ao clicar fora (no fundo escuro/overlay)
+        if (slideOutOverlay) slideOutOverlay.addEventListener('click', (e) => {
+            fecharLoginPanel();
+        });
+
+        // Fechar ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && slideOutPanel && slideOutPanel.classList.contains('is-open')) {
+                fecharLoginPanel();
+            }
+        });
+
+
+      
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 5. INICIALIZAÇÃO DE ÍCONES
+        // [CÓDIGO ORIGINAL MANTIDO]
+        // ----------------------------------------------------------------------------------------------------------------
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

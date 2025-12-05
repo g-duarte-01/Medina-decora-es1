@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliações de Clientes</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #dad3b8;
+      padding: 20px;
+    }
+
+    .review-section {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .review {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .review img {
+      width: 100px;
+      height: 100px;
+      border-radius: 20%;
+      object-fit: cover;
+    }
+
+    .review-content {
+      flex: 2;
+    }
+
+    .review-content h3 {
+      margin: 0;
+      font-size: 48px;
+      color: #333;
+    }
+
+    .stars {
+      color: #FFD700;
+      font-size: 30px;
+      margin: 5px 0;
+    }
+
+    .review-content p {
+      font-size: 15px;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+ <div style="text-align: center; margin-top: 30px;">
+  <button onclick="window.location.href='index.html'" style="
+    background-color: #9b872d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  ">
+    Voltar à Página Inicial
+  </button>
+</div>
+  </header>
+  <div class="review-section">
+    <h1>Avaliações de Clientes</h1>
+
+    <div class="review">
+     <img src="img/bia.jpg" alt="Foto de Juliana">
+      <div class="review-content">
+        <h3>Juliana M.</h3>
+        <div class="stars">★★★★★</div>
+        <p>O móvel é maravilhoso! A qualidade da madeira e o acabamento são impecáveis. Ficou perfeito na minha sala.</p>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="img/rafael.jpg" alt="Foto do cliente">
+      <div class="review-content">
+        <h3>Rafael T.</h3>
+        <div class="stars">★★★★☆</div>
+        <p>Gostei muito do design, super moderno. Só achei a montagem um pouco difícil, mas valeu a pena!</p>
+      </div>
+    </div>
+
+    <div class="review">
+      <img src="img/carla.jpg" alt="Foto do cliente">
+      <div class="review-content">
+        <h3>Carla S.</h3>
+        <div class="stars">★★★★★</div>
+        <p>Entrega rápida e produto excelente. Recomendo demais para quem quer dar um toque especial na decoração.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

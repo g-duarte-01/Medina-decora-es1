@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- O SEU ARQUIVO CSS EXTERNO FOI MANTIDO AQUI: -->
+    <link rel="stylesheet" href="./css/style.css">
+
+ 
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+           <nav class="navegacao">
+                <ul class="navegacao__lista">
+                     <li><a href="index.html">Início</a></li>
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li> <a href="sobre nós.html">Sobre nós</a></li>
+
+                </ul>
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar">
+                    <button>
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Pesquisar">
+                    </button>
+                </div>
+
+                <!-- MODIFICAÇÃO MÍNIMA: O href foi alterado de './login.html' para '#login-panel' -->
+                <div class="navegacao__usuario-cadastro">
+                    <button class="navegacao__botao-icone">
+                        <!-- Ícone de Login - AGORA ABRE O PAINEL OFF-CANVAS -->
+                        <a href="#login-panel" aria-label="Abrir Painel de Login">
+                            <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                                alt="Usuário">
+                        </a>
+                    </button>
+                    <button class="navegacao__botao-cadastro">
+                        Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card1">
+        <img src="data:image/jpeg;base64,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" alt="Imagem de Cortinas">
+        <h3>persianas automatizadas </h3>
+        <br>
+        
+        <p>
+           Transforme seus espaços com persianas que combinam conforto visual e estilo. Ideais para criar um ambiente harmonioso,
+            funcional e cheio de personalidade. com as nossas Novas persianas automatizadas
+            <br>
+            Transforme sua casa com o poder dos detalhes.
+            <br>
+            ❕Para mais informações acesse nosso contato!
+        </p>
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <div class="rodape__conteudo">
+                <div class="rodape__redes-sociais">
+                    <a href="https://www.instagram.com/"><img src="./img/1161953_instagram_icon.png"
+                            alt="Instagram"></a>
+                    <a href="https://pt-br.facebook.com/"><img src="./img/104498_facebook_icon.png" alt="Facebook"></a>
+                    <a href="https://x.com/"><img src="./img/twitter.png" alt="Twitter"></a>
+                </div>
+                <div class="rodape__seguranca">
+                    <img src="./img/segurança.svg" alt="Selo de segurança">
+                    <p>Ambiente 100% seguro<br>Aqui sua informação é<br>protegida por criptografia</p>
+                </div>
+                <div class="rodape__links">
+         <a href="curiosidades.html">Curiosidades</a>
+                <a href="./contato.html">Contato</a>
+                <a href="trabalhe conosco.html">Trabalho Conosco</a>
+                <a href="avaliações.html">Avaliações</a>
+                <a href="dúvidas.html">Dúvidas</a>
+                <a href="gestão financeira.html">Gestão financeira</a>
+                <a href="localização.html">Endereço</a>
+                <a href="./privacidade.html">Privacidade</a>
+                <a href="funcionamento.html">Horário de Funcionamento</a>
+                <a href="https://wa.me/+5511940028922">WhatsApp</a>
+            </div>
+                </div>
+            </div>
+        </footer>
+   
+</body>
+
+
+
+
+</div>

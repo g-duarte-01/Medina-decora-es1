@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Localizador - Osasco</title>
+ <!-- O SEU ARQUIVO CSS EXTERNO FOI MANTIDO AQUI: -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Carrega Tailwind CSS CDN para o painel de login e estilos modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ícone de Login (Lucide Icons) - Usado no painel e no botão de fechar -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+</head>
+<body>
+<header>
+   <div style="text-align: center; margin-top: 30px;">
+  <button onclick="window.location.href='index.html'" style="
+    background-color: #d3cc8d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  ">
+    Voltar à Página Inicial
+  </button>
+</div>
+</header>
+  <h1>Localização</h1>
+  <p>Av. dos Autonomistas, 1400 - Vila Yara, Osasco - SP, 06020-010</p>
+
+  <!-- Link direto para o Google Maps -->
+  <a href="https://www.google.com/maps?q=Av.+dos+Autonomistas,+1400+-+Vila+Yara,+Osasco+-+SP,+06020-010" 
+     target="_blank" 
+     class="map-link">
+     Ver no Google Maps
+  </a>
+
+  <!-- Mapa incorporado -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Av.+dos+Autonomistas,+1400+-+Vila+Yara,+Osasco+-+SP,+06020-010&output=embed"
+      width="600"
+      height="450"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+  </div>
+
+</body>
+</html>

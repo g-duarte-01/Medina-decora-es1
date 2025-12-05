@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cortinas</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+     <header class="cabecalho">
+        <div class="cabecalho__container">
+            <img class="cabecalho__logo" src="img/Imagem trabalho grupo.png" alt="Medina Decorações">
+
+            <input type="checkbox" id="menu-mobile" class="menu-mobile__checkbox">
+            <label for="menu-mobile" class="menu-mobile__hamburguer">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </label>
+
+            <nav class="navegacao">
+                <ul class="navegacao__lista">
+                    <li><a href="index.html">Início</a></li> 
+                    <li><a href="cortinas.html">Cortinas</a></li>
+                    <li><a href="persianas.html">Persianas</a></li>
+                    <li><a href="tapetes.html">Tapetes</a></li>
+                    <li><a href="almofadas.html">Almofadas</a></li>
+                    <li><a href="sobre nós.html">Sobre nós</a></li>
+                </ul>
+
+                <div class="navegacao__pesquisa">
+                    <input type="text" placeholder="Pesquisar" aria-label="Campo de Pesquisa">
+                    <button type="submit" aria-label="Botão de Pesquisar">
+                        <img src="https://cdn0.iconfinder.com/data/icons/essentials-9/128/__Search-64.png"
+                            alt="Ícone de Pesquisar">
+                    </button>
+                </div>
+
+                <div class="navegacao__usuario-cadastro">
+                    <button id="btn-abrir-login" class="navegacao__botao-icone" aria-label="Abrir Painel de Login">
+                        <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/user-256.png"
+                            alt="Ícone de Usuário">
+                    </button>
+                    <button class="navegacao__botao-cadastro" onclick="location.href='./Cadastro.html'"> Cadastro
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="slide-out-overlay" class="slide-out-overlay"></div>
+
+    <div id="slide-out-panel" class="slide-out-panel bg-white overflow-y-auto" 
+        role="dialog" aria-modal="true" aria-labelledby="panel-title">
+
+        <div class="w-full h-full p-6 relative">
+            <header class="flex justify-between items-center mb-6 border-b pb-4">
+                <h2 id="panel-title" class="text-2xl font-bold text-gray-800">Login</h2>
+                
+                <button id="btn-fechar-panel"
+                    class="text-gray-500 hover:text-gray-700 transition duration-150"
+                    aria-label="Fechar Painel de Login">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </header>
+
+            <form action="#" method="POST" class="flex flex-col gap-5">
+                <div>
+                    <label for="email-login" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email-login" name="email" placeholder="ex.: usuario@domínio.com" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password-login" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
+                    <input type="password" id="password-login" name="password" placeholder="••••••••" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                        autocomplete="current-password">
+                </div>
+
+                <button type="submit"
+                    class="mt-4 w-full px-4 py-3 text-white font-semibold rounded-lg shadow-md transition duration-150 focus:ring-4 focus:ring-[#b9a978]/50"
+                    style="background-color: #b9a978; box-shadow: 0 4px 10px rgba(185, 169, 120, 0.4); border-radius: 12px;">
+                    Entrar
+                </button>
+            </form>
+
+            <footer class="mt-6 pt-4 border-t text-center">
+                <p class="text-sm text-gray-600">Não possui cadastro?
+                    <a href="./Cadastro.html"
+                        class="register-link text-blue-600 hover:text-blue-700 font-medium transition duration-150"
+                        aria-label="Cadastre-se para criar uma nova conta">
+                        Cadastre-se
+                    </a>
+                </p>
+            </footer>
+        </div>
+    </div>
+ 
+
+                </div>
+            </nav>
+        </div>
+    </header>
+ 
+
+ <br>
+ <br>
+ <br>
+  <div class="produtos">
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/813691/pexels-photo-813691.jpeg" alt="persiana 1" height="100px" width="100px">
+      <h2>Cortina de voil</h2>
+    </div>
+ 
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/1743226/pexels-photo-1743226.jpeg" height="100px">
+      <h2>Cortina blackout</h2>
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg" alt="persiana 3">
+      <h2>Cortina lisas</h2>
+    
+    </div>
+  </div>
+ <div class="produtos">
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/276518/pexels-photo-276518.jpeg" alt="persiana 4">
+      <h2>cortinas com listras</h2>
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/30065112/pexels-photo-30065112.jpeg" alt="persiana 5">
+      <h2>Cortina - persiana</h2>
+      
+    </div>
+ 
+    <div class="produto">
+      <img src="https://images.pexels.com/photos/6077368/pexels-photo-6077368.jpeg" alt="persiana 6">
+      <h2> Cortina romana </h2>
+    </div>
+  </div>
+   <!--RODAPÉ-->
+    <footer class="rodape">
+        <div class="rodape__conteudo">
+            <div class="rodape__redes-sociais">
+                
+                <a href="https://www.instagram.com/" aria-label="Instagram"><img src="./img/1161953_instagram_icon.png" alt="Instagram"></a>
+                <a href="https://pt-br.facebook.com/" aria-label="Facebook"><img src="./img/104498_facebook_icon.png" alt="Facebook"></a>
+                <a href="https://x.com/" aria-label="Twitter/X"><img src="./img/twitter.png" alt="Twitter/X"></a>
+            </div>
+            <div class="rodape__seguranca">
+                <img src="./img/segurança.svg" alt="Selo de segurança">
+                <p>Ambiente 100% seguro<br>Aqui sua informação é<br>protegida por criptografia</p>
+            </div>
+            <div class="rodape__links">
+                <a href="curiosidades.html">Curiosidades</a>
+                <a href="./contato.html">Contato</a>
+                <a href="trabalhe conosco.html">Trabalhe Conosco</a>
+                <a href="avaliações.html">Avaliações</a>
+                <a href="dúvidas.html">Dúvidas</a>
+                <a href="gestão financeira.html">Gestão financeira</a>
+                <a href="localização.html">Endereço</a>
+                <a href="./privacidade.html">Privacidade</a>
+                <a href="funcionamento.html">Horário de Funcionamento</a>
+                <a href="https://wa.me/+5511940028922" target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Elementos do NOVO Painel Slide-out
+        const slideOutPanel = document.getElementById('slide-out-panel'); // Painel
+        const slideOutOverlay = document.getElementById('slide-out-overlay'); // Overlay
+        const btnAbrir = document.getElementById('btn-abrir-login'); // Botão na barra de navegação
+        const btnFechar = document.getElementById('btn-fechar-panel'); // Botão 'X' dentro do painel
+        const emailInput = document.getElementById('email-login');
+        // ----------------------------------------------------------------------------------------------------------------
+        // 3. LÓGICA DO NOVO PAINEL SLIDE-OUT DE LOGIN
+        // [LÓGICA ATUALIZADA]
+        // ----------------------------------------------------------------------------------------------------------------
+
+        /**
+         * Abre o painel deslizante, adicionando a classe 'is-open' e focando no campo de email.
+         */
+        function abrirLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.add('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.add('is-open');
+            // Remove a classe 'hidden' do body (se houver, para evitar rolagem de fundo, embora não estivesse no código original)
+            document.body.classList.add('overflow-hidden');
+            if (emailInput) emailInput.focus();
+        }
+
+        /**
+         * Fecha o painel deslizante, removendo a classe 'is-open'.
+         */
+        function fecharLoginPanel() {
+            if (slideOutPanel) slideOutPanel.classList.remove('is-open');
+            if (slideOutOverlay) slideOutOverlay.classList.remove('is-open');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Event Listeners:
+        if (btnAbrir) btnAbrir.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirLoginPanel();
+        });
+
+        if (btnFechar) btnFechar.addEventListener('click', (e) => {
+            e.preventDefault();
+            fecharLoginPanel();
+        });
+
+        // Fechar ao clicar fora (no fundo escuro/overlay)
+        if (slideOutOverlay) slideOutOverlay.addEventListener('click', (e) => {
+            fecharLoginPanel();
+        });
+
+        // Fechar ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && slideOutPanel && slideOutPanel.classList.contains('is-open')) {
+                fecharLoginPanel();
+            }
+        });
+
+
+      
+
+
+        // ----------------------------------------------------------------------------------------------------------------
+        // 5. INICIALIZAÇÃO DE ÍCONES
+        // [CÓDIGO ORIGINAL MANTIDO]
+        // ----------------------------------------------------------------------------------------------------------------
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
